@@ -1,4 +1,4 @@
-const body = document.getElementsByTagName('body')
+const body = document.getElementsByTagName('body')[0]
 
 // Create header tag + insides VARIABLES
 const header = document.createElement('header')
@@ -68,60 +68,111 @@ navAServices.href = "#Services"
 navAServices.innerHTML = "Services"
 navAOrder.href = "#Order"
 navAOrder.innerHTML = "Order"
+divSearch.classList.add("search-bar")
+inputSearch.type = "text"
+inputSearch.placeholder = "Spaceflights at..."
+buttonSearch.classList.add("search-bar-button")
+buttonSearch.type = "submit"
+buttonSearch.innerHTML = "SEARCH"
 
+// Logo Content
+h1Main.classList.add("main-logo")
+h1Main.id = "Home"
+h1Main.innerHTML = "EXO"
+h2Bottom.classList.add("bottom-logo")
+h2Bottom.innerHTML = "Starliners"
+
+// Gallery Content
+sectionVideo.classList.add("video-gallery")
+divVideo.classList.add("video")
+iFrameVideo.width = "960"
+iFrameVideo.height = "540"
+iFrameVideo.src = "https://www.youtube.com/embed/921VbEMAwwY"
+iFrameVideo.allowFullscreen = true
+sectionImage.classList.add("image-gallery")
+divImageAstro.classList.add("image")
+imgAstro.src = "./Assets/astronauts.jpg"
+imgAstro.alt = "Astronauts working"
+imgAstro.width = "300"
+imgAstro.height = "300"
+divImageChute.classList.add("image")
+imgChute.src = "./Assets/demoChutes.jpg"
+imgChute.alt = "Demo parachutes"
+imgChute.width = "300"
+imgChute.height = "300"
+divImageLanding.classList.add("image")
+imgLanding.src = "./Assets/moonLanding.jpg"
+imgLanding.alt = "Our rocket on the moon"
+imgLanding.width = "300"
+imgLanding.height = "300"
+divImageRocket.classList.add("image")
+imgRocket.src = "./Assets/reuseableRockets.jpg"
+imgRocket.alt = "Showcasing reusable rockets"
+imgRocket.width = "300"
+imgRocket.height = "300"
+divImageLaunch.classList.add("image")
+imgLaunch.src = "./Assets/rocketLaunch.jpg"
+imgLaunch.alt = "A rocket launch at SpaceX"
+imgLaunch.width = "300"
+imgLaunch.height = "300"
+divImageDock.classList.add("image")
+imgDock.src = "./Assets/spaceshipDock.jpg"
+imgDock.alt = "The Dragon Spaceship docking to the ISS"
+imgDock.width = "300"
+imgDock.height = "300"
 
 // Header STRUCTURE
-document.body.appendChild(header)
-document.header.appendChild(nav)
-document.nav.appendChild(ul)
-document.ul.appendChild(navHome)
-document.navHome.appendChild(navAHome)
-document.ul.appendChild(navGallery)
-document.navGallery.appendChild(navAGallery)
-document.ul.appendChild(navServices)
-document.nacServices.appendChild(navAServices)
-document.ul.appendChild(navOrder)
-document.navOrder.appendChild(navAOrder)
-document.ul.appendChild(divSearch)
-document.divSearch.appendChild(inputSearch)
-document.divSearch.appendChild(buttonSearch)
+body.appendChild(header)
+header.appendChild(nav)
+nav.appendChild(ul)
+ul.appendChild(navHome)
+navHome.appendChild(navAHome)
+ul.appendChild(navGallery)
+navGallery.appendChild(navAGallery)
+ul.appendChild(navServices)
+navServices.appendChild(navAServices)
+ul.appendChild(navOrder)
+navOrder.appendChild(navAOrder)
+ul.appendChild(divSearch)
+divSearch.appendChild(inputSearch)
+divSearch.appendChild(buttonSearch)
 
 // Logo STRUCTURE
-document.body.appendChild(h1Main)
-document.body.appendChild(h2Bottom)
+body.appendChild(h1Main)
+body.appendChild(h2Bottom)
 
 // Gallery STRUCTURE
-document.body.appendChild(sectionVideo)
-document.sectionVideo.appendChild(divVideo)
-document.divVideo.appendChild(iFrameVideo)
-document.body.appendChild(sectionImage)
-document.sectionImage.appendChild(divImageAstro)
-document.divImageAstro.appendChild(imgAstro)
-document.sectionImage.appendChild(divImageChute)
-document.divImageChute.appendChild(imgChute)
-document.sectionImage.appendChild(divImageLanding)
-document.divImageLanding.appendChild(imgLanding)
-document.sectionImage.appendChild(divImageLaunch)
-document.divImageLaunch.appendChild(imgLaunch)
-document.sectionImage.appendChild(divImageDock)
-document.divImageDock.appendChild(imgDock)
+body.appendChild(sectionVideo)
+sectionVideo.appendChild(divVideo)
+divVideo.appendChild(iFrameVideo)
+body.appendChild(sectionImage)
+sectionImage.appendChild(divImageAstro)
+divImageAstro.appendChild(imgAstro)
+sectionImage.appendChild(divImageChute)
+divImageChute.appendChild(imgChute)
+sectionImage.appendChild(divImageLanding)
+divImageLanding.appendChild(imgLanding)
+sectionImage.appendChild(divImageLaunch)
+divImageLaunch.appendChild(imgLaunch)
+sectionImage.appendChild(divImageDock)
+divImageDock.appendChild(imgDock)
 
 // Services STRUCTURE
-document.body.appendChild(sectionServices)
-document.sectionServices.appendChild(divGridServices)
-document.divGridServices.appendChild(h2GridServices)
-document.divGridServices.appendChild(pGridServices)
-document.sectionUpgrades.appendChild(divGridUpgrades)
-document.divGridUpgrades.appendChild(h2GridUpgrades)
-document.divGridUpgrades.appendChild(pGridUpgrades)
-document.sectionServices.appendChild(divGridPrices)
-document.divGridPrices.appendChild(h2GridPrices)
-document.divGridPrices.appendChild(pGridPrices1)
-document.divGridPrices.appendChild(pGridPrices2)
-document.divGridPrices.appendChild(pGridPrices3)
-document.sectionServices.appendChild(divGridReviews)
-document.divGridReviews.appendChild(h2GridReviews)
-document.divGridReviews.appendChild(pGridReviews1)
-document.divGridReviews.appendChild(pGridReviews2)
-document.divGridReviews.appendChild(pGridReviews3)
+body.appendChild(sectionServices)
+sectionServices.appendChild(divGridServices)
+divGridServices.appendChild(h2GridServices)
+divGridServices.appendChild(pGridServices)
+sectionServices.appendChild(divGridUpgrades)
+divGridUpgrades.appendChild(h2GridUpgrades)
+divGridUpgrades.appendChild(pGridUpgrades)
+sectionServices.appendChild(divGridPrices)
+divGridPrices.appendChild(h2GridPrices)
+divGridPrices.appendChild(pGridPrices1)
+divGridPrices.appendChild(pGridPrices2)
+divGridPrices.appendChild(pGridPrices3)
+sectionServices.appendChild(divGridReviews)
+divGridReviews.appendChild(h2GridReviews)
+divGridReviews.appendChild(pGridReviews1)
+divGridReviews.appendChild(pGridReviews2)
+divGridReviews.appendChild(pGridReviews3)
 
