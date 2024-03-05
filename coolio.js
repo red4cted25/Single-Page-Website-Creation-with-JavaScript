@@ -57,7 +57,12 @@ const pGridReviews1 = document.createElement('p')
 const pGridReviews2 = document.createElement('p')
 const pGridReviews3 = document.createElement('p')
 
-// Header Content
+// Footer VARIABLES
+const footer = document.createElement('footer')
+const divFooterContent = document.createElement('div')
+const divFooterItem = document.createElement('div')
+
+// Header CONTENT
 nav.classList.add("sticky")
 ul.classList.add("nav-links")
 navAHome.href = "#Home"
@@ -75,14 +80,14 @@ buttonSearch.classList.add("search-bar-button")
 buttonSearch.type = "submit"
 buttonSearch.innerHTML = "SEARCH"
 
-// Logo Content
+// Logo CONTENT
 h1Main.classList.add("main-logo")
 h1Main.id = "Home"
 h1Main.innerHTML = "EXO"
 h2Bottom.classList.add("bottom-logo")
 h2Bottom.innerHTML = "Starliners"
 
-// Gallery Content
+// Gallery CONTENT
 sectionVideo.classList.add("video-gallery")
 divVideo.classList.add("video")
 iFrameVideo.width = "960"
@@ -120,6 +125,26 @@ imgDock.src = "./Assets/spaceshipDock.jpg"
 imgDock.alt = "The Dragon Spaceship docking to the ISS"
 imgDock.width = "300"
 imgDock.height = "300"
+
+// Services CONTENT
+sectionServices.classList.add("grid-container")
+sectionServices.id = "services"
+divGridServices.classList.add("grid-item")
+h2GridServices.innerHTML = "Our Services"
+pGridServices.innerHTML = "Journey to other worlds on our first-rate reusable rockets, or have items shipped interplanetary."
+divGridUpgrades.classList.add("grid-item")
+h2GridUpgrades.innerHtml = "Optional Upgrades"
+pGridUpgrades.innerHTML = "Want to have the entire journey to just your group? Fly in a starship just for you! (Extra fees may apply)"
+divGridPrices.classList.add("grid-item")
+h2GridPrices.innerHTML = "Prices"
+pGridPrices1.innerHTML = "Lunar flights start at 6k per person."
+pGridPrices2.innerHTML = "Martian flights start at 36k per person."
+pGridPrices3.innerHTML = "Contact our service team for discounted flights on cargo starships."
+
+// Footer CONTENT
+divFooterContent.classList.add('footer-content')
+divFooterItem.classList.add('footer-item')
+divFooterItem.innerHTML = "Credit: Lucas Saner and Nico Diaz | Contact: lsaner720@west-mec.org, ndiaz413@west-mec.org | ©Copyright 2037 to SpaceX for all content."
 
 // Header STRUCTURE
 body.appendChild(header)
