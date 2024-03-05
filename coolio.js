@@ -1,5 +1,13 @@
 const body = document.getElementsByTagName('body')[0]
 
+// Body STYLE
+body.style.margin = "0";
+body.style.padding = "0";
+body.style.backgroundImage = "url('./Assets/endless-constellation.svg')";
+body.style.backgroundRepeat = "repeat";
+body.style.backgroundPosition = "center center";
+body.style.overflowX = "hidden";
+
 // Create header tag + insides VARIABLES
 const header = document.createElement('header')
 const nav = document.createElement('nav')
@@ -63,8 +71,8 @@ const divFooterContent = document.createElement('div')
 const divFooterItem = document.createElement('div')
 
 // Header CONTENT
-nav.classList.add("sticky")
-ul.classList.add("nav-links")
+nav.className = "sticky"
+ul.className = "nav-links"
 navAHome.href = "#Home"
 navAHome.innerHTML = "Home"
 navAGallery.href = "#Gallery"
@@ -73,78 +81,155 @@ navAServices.href = "#Services"
 navAServices.innerHTML = "Services"
 navAOrder.href = "#Order"
 navAOrder.innerHTML = "Order"
-divSearch.classList.add("search-bar")
+divSearch.className ="search-bar"
 inputSearch.type = "text"
 inputSearch.placeholder = "Spaceflights at..."
-buttonSearch.classList.add("search-bar-button")
+buttonSearch.className ="search-bar-button"
 buttonSearch.type = "submit"
 buttonSearch.innerHTML = "SEARCH"
 
+// Header STYLE
+header.style.color = "#fff";
+header.style.padding = "10px 0";
+nav.style.position = "fixed";
+nav.style.top = "0";
+nav.style.zIndex = "100";
+// Attempt at styling header
+const navLinks = document.querySelectorAll(".nav-links li");
+navLinks.forEach(link => {
+    link.style.margin = "20px 15px";
+});
+const navAnchors = document.querySelectorAll(".nav-links a");
+navAnchors.forEach(anchor => {
+    anchor.style.textDecoration = "none";
+    anchor.style.color = "#fff";
+    anchor.style.fontWeight = "bold";
+    anchor.style.transition = "color 0.3s, background-color 0.3s";
+    anchor.style.padding = "20px 20px";
+    anchor.style.borderRadius = "5px";
+    anchor.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+    anchor.addEventListener("mouseover", () => {
+        anchor.style.color = "#00489a";
+        anchor.style.backgroundColor = "#151515";
+    });
+    anchor.addEventListener("mouseout", () => {
+        anchor.style.color = "#fff";
+        anchor.style.backgroundColor = "transparent";
+    });
+});
+
 // Logo CONTENT
-h1Main.classList.add("main-logo")
+h1Main.className ="main-logo"
 h1Main.id = "Home"
 h1Main.innerHTML = "EXO"
-h2Bottom.classList.add("bottom-logo")
+h2Bottom.className ="bottom-logo"
 h2Bottom.innerHTML = "Starliners"
 
 // Gallery CONTENT
-sectionVideo.classList.add("video-gallery")
-divVideo.classList.add("video")
+sectionVideo.className ="video-gallery"
+divVideo.className ="video"
 iFrameVideo.width = "960"
 iFrameVideo.height = "540"
 iFrameVideo.src = "https://www.youtube.com/embed/921VbEMAwwY"
 iFrameVideo.allowFullscreen = true
-sectionImage.classList.add("image-gallery")
-divImageAstro.classList.add("image")
+sectionImage.className ="image-gallery"
+divImageAstro.className ="image"
 imgAstro.src = "./Assets/astronauts.jpg"
 imgAstro.alt = "Astronauts working"
 imgAstro.width = "300"
 imgAstro.height = "300"
-divImageChute.classList.add("image")
+divImageChute.className ="image"
 imgChute.src = "./Assets/demoChutes.jpg"
 imgChute.alt = "Demo parachutes"
 imgChute.width = "300"
 imgChute.height = "300"
-divImageLanding.classList.add("image")
+divImageLanding.className ="image"
 imgLanding.src = "./Assets/moonLanding.jpg"
 imgLanding.alt = "Our rocket on the moon"
 imgLanding.width = "300"
 imgLanding.height = "300"
-divImageRocket.classList.add("image")
+divImageRocket.className ="image"
 imgRocket.src = "./Assets/reuseableRockets.jpg"
 imgRocket.alt = "Showcasing reusable rockets"
 imgRocket.width = "300"
 imgRocket.height = "300"
-divImageLaunch.classList.add("image")
+divImageLaunch.className ="image"
 imgLaunch.src = "./Assets/rocketLaunch.jpg"
 imgLaunch.alt = "A rocket launch at SpaceX"
 imgLaunch.width = "300"
 imgLaunch.height = "300"
-divImageDock.classList.add("image")
+divImageDock.className ="image"
 imgDock.src = "./Assets/spaceshipDock.jpg"
 imgDock.alt = "The Dragon Spaceship docking to the ISS"
 imgDock.width = "300"
 imgDock.height = "300"
 
+// Gallery STYLE
+sectionImage.style.display = "flex";
+sectionImage.style.flexWrap = "wrap";
+sectionImage.style.justifyContent = "space-between";
+sectionImage.style.gap = "20px";
+sectionImage.style.marginLeft = "10%";
+sectionImage.style.marginTop = "800px";
+document.querySelectorAll(".image").forEach(image => {
+    image.style.flexBasis = "calc(33.33% - 20px)";
+})
+
 // Services CONTENT
-sectionServices.classList.add("grid-container")
+sectionServices.className ="grid-container"
 sectionServices.id = "services"
-divGridServices.classList.add("grid-item")
+divGridServices.className ="grid-item"
 h2GridServices.innerHTML = "Our Services"
 pGridServices.innerHTML = "Journey to other worlds on our first-rate reusable rockets, or have items shipped interplanetary."
-divGridUpgrades.classList.add("grid-item")
+divGridUpgrades.className ="grid-item"
 h2GridUpgrades.innerHtml = "Optional Upgrades"
 pGridUpgrades.innerHTML = "Want to have the entire journey to just your group? Fly in a starship just for you! (Extra fees may apply)"
-divGridPrices.classList.add("grid-item")
+divGridPrices.className ="grid-item"
 h2GridPrices.innerHTML = "Prices"
 pGridPrices1.innerHTML = "Lunar flights start at 6k per person."
 pGridPrices2.innerHTML = "Martian flights start at 36k per person."
 pGridPrices3.innerHTML = "Contact our service team for discounted flights on cargo starships."
+h2GridReviews.innerHTML = "Customer Reviews"
+pGridReviews1.innerHTML = '"Life changing experience, it really makes you realize how speacial our planet is." - Neil D. Tyson'
+pGridReviews2.innerHTML = '"Our family got to experience the best vacation of all time, shooting for a mars vacation soon! - Ace Kronos'
+pGridReviews3.innerHTML = '"The sunset is otherwordly when your out there. PUN INTENDED >:P" - Jay Tsunami'
+
+// Services STYLE
+sectionServices.style.display = "grid";
+sectionServices.style.marginTop = "20%";
+sectionServices.style.gridTemplateColumns = "repeat(2, 1fr)";
+sectionServices.style.gridGap = "20px";
+sectionServices.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+sectionServices.style.marginBottom = "20%";
+document.querySelectorAll(".grid-item").forEach(item => {
+    item.style.backgroundColor = "#2b2b2b";
+    item.style.padding = "20px";
+    item.style.border = "5px solid #000000";
+    item.style.color = "white";
+    item.style.fontFamily = "modern";
+})
 
 // Footer CONTENT
-divFooterContent.classList.add('footer-content')
-divFooterItem.classList.add('footer-item')
+divFooterContent.className ='footer-content'
+divFooterItem.className ='footer-item'
 divFooterItem.innerHTML = "Credit: Lucas Saner and Nico Diaz | Contact: lsaner720@west-mec.org, ndiaz413@west-mec.org | ©Copyright 2037 to SpaceX for all content."
+
+// Footer STYLE
+footer.style.backgroundColor = "#333";
+footer.style.color = "#fff";
+footer.style.padding = "20px 0";
+footer.style.marginTop = "340px";
+divFooterContent.style.justifyContent = "space-around";
+divFooterContent.style.fontFamily = "modern";
+divFooterItem.style.fontFamily = "modern";
+divFooterItem.style.display = "flex";
+divFooterItem.style.justifyContent = "center";
+divFooterItem.style.alignItems = "center";
+divFooterItem.style.textAlign = "center";
+divFooterItem.style.fontSize = "20px";
+divFooterItem.style.textShadow = "5px 5px 4px rgba(27, 27, 27, 0.5)";
+divFooterItem.style.paddingLeft = "50px";
+divFooterItem.style.width = "100%";
 
 // Header STRUCTURE
 body.appendChild(header)
@@ -201,3 +286,7 @@ divGridReviews.appendChild(pGridReviews1)
 divGridReviews.appendChild(pGridReviews2)
 divGridReviews.appendChild(pGridReviews3)
 
+// Footer STRUCTURE
+body.appendChild(footer)
+footer.appendChild(divFooterContent)
+divFooterContent.appendChild(divFooterItem)
